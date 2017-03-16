@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Script</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #area-juego {
+            height: 500px;
+            width: 800px;
+            border: 1px solid black;
+            margin: 80px auto;
+            position: relative;
+        }
+
+        #personaje1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            position: absolute;
+            opacity: 0;
+        }
+
+        #check1 {
+            position: absolute;
+        }
+
+        #check1 img {
+            width: 30%;
+            opacity: 0;
+        }
+
+        .gif img {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div id="area-juego">
+        <div id="check1">
+            <img src="star1.png"/>
+        </div>
+        <div id="personaje1"></div>
+    </div>
+
+    <div class="gif" style="opacity: 0;">
+        <img src="bubble1.gif">
+    </div>
+
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
