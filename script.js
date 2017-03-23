@@ -7,6 +7,13 @@ $(document).ready(function () {
 		RIGHT: 39
 	};
 
+	var estadosKeys = {
+		key1: false,
+		key2: false,
+		key3: false,
+		entrada: false
+	};
+
 	var left = 150;
 	var top = 200;
 	$("#personaje1").css("top", top);
@@ -19,12 +26,37 @@ $(document).ready(function () {
 	//DETECCIÓN CUANDO SE PRESIONA UNA TECLA
 	document.addEventListener("keydown", deteccionTeclado);
 
-	function checkPoints(top, left) {
-		if (top == 300 && left == 600) {
+	function verificarPuerta (keys) {
+		if (top == 300 && left == 600 && keys.entrada == true) {
 			$("#checkpoint1").css("opacity", 1);
 			$("#personaje1").css("opacity", 0);
 			$("#checkpoint2").css("opacity", 0);
 		}
+	}
+
+	function checkPoints(top, left) {
+		if (top == 100 && left == 50 && estadosKeys.key1 == false) {
+			estadosKeys.key1 = true;
+			$("#keyCheck1").css("opacity", 0);
+			$("#keyCheck2").css("opacity", 1);
+			$("#key1").attr("src", "assets/key1.png");
+		}
+
+		if (top == 150 && left == 550 && estadosKeys.key1 == true) {
+			estadosKeys.key2 = true;
+			$("#keyCheck2").css("opacity", 0);
+			$("#keyCheck3").css("opacity", 1);
+			$("#key2").attr("src", "assets/key1.png");
+		}
+
+		if (top == 300 && left == 250 && estadosKeys.key2 == true) {
+			estadosKeys.entrada = true;
+			$("#keyCheck3").css("opacity", 0);
+			$("#key3").attr("src", "assets/key1.png");
+			$(".led-red").toggleClass("led-green");
+		}
+
+		verificarPuerta(estadosKeys);
 	}
 
 	function movimientoElemento(top, left) {

@@ -19,7 +19,7 @@
 			background-image: url('assets/escenario1.png');
 			background-size: 100%;
 			//border: 1px solid black;
-			margin: 80px auto;
+			margin: 0 auto;
 			position: relative;
 
 		}
@@ -61,19 +61,58 @@
 			width: 100%;
 		}
 
+		#keyCheck1, #keyCheck2, #keyCheck3 {
+			width: 7%;
+		}
+
+		#keyCheck1 {
+			position: absolute;
+			top: 116px;
+    		left: 62px;
+			opacity: 1;
+		}
+
+		#keyCheck2 {
+			position: absolute;
+			top: 168px;
+    		left: 560px;
+			opacity: 0;
+		}
+
+		#keyCheck3 {
+			position: absolute;
+			top: 313px;
+			left: 263px;
+			opacity: 0;
+		}
 
 	</style>
 </head>
 <body>
 	<h1>Lolita Game</h1>
 	<img src="assets/lolita-wall.png" id="wall-img">
+
+	<div id="score">
+		<div class="keys">
+			<img src="assets/key0.png" id="key1"/>
+			<img src="assets/key0.png" id="key2"/>
+			<img src="assets/key0.png" id="key3"/>
+		</div>
+	</div>
+
 	<div id="area-juego">
 		<div id="checkpoint1">
 			<img src="assets/winner.gif" />
 		</div>
+
 		<div id="personaje1">
 			<img src="assets/personaje-estado2.gif">
 		</div>
+
+		<img src="assets/key1.png" id="keyCheck1"/>
+		<img src="assets/key1.png" id="keyCheck2"/>
+		<img src="assets/key1.png" id="keyCheck3"/>
+
 		<div id="checkpoint2">
 			<img src="assets/door.png">
 			<div class="led-box">
