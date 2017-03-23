@@ -18,7 +18,7 @@ $(document).ready(function () {
 	var top = 200;
 	$("#personaje1").css("top", top);
 	$("#personaje1").css("left", left);
-	$("#personaje1").css("opacity", 1);
+	$("#personaje1").show();
 
 	var width = parseInt($("#area-juego").css("width")) - 150;
 	var height = parseInt($("#area-juego").css("height")) - 150;
@@ -37,21 +37,21 @@ $(document).ready(function () {
 	function checkPoints(top, left) {
 		if (top == 100 && left == 50 && estadosKeys.key1 == false) {
 			estadosKeys.key1 = true;
-			$("#keyCheck1").css("opacity", 0);
-			$("#keyCheck2").css("opacity", 1);
+			$("#keyCheck1").hide();
+			$("#keyCheck2").show();
 			$("#key1").attr("src", "assets/key1.png");
 		}
 
 		if (top == 150 && left == 550 && estadosKeys.key1 == true) {
 			estadosKeys.key2 = true;
-			$("#keyCheck2").css("opacity", 0);
-			$("#keyCheck3").css("opacity", 1);
+			$("#keyCheck2").hide();
+			$("#keyCheck3").show();
 			$("#key2").attr("src", "assets/key1.png");
 		}
 
 		if (top == 300 && left == 250 && estadosKeys.key2 == true) {
 			estadosKeys.entrada = true;
-			$("#keyCheck3").css("opacity", 0);
+			$("#keyCheck3").hide();
 			$("#key3").attr("src", "assets/key1.png");
 			$(".led-red").toggleClass("led-green");
 		}
