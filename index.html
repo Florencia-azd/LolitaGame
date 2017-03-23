@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Super Script</title>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/style.css" >
+
+	<title>Lolita Game</title>
 	<style>
 		body {
 			margin: 0;
 			overflow-y: hidden;
-	 		overflow-x: scroll;
+	 		overflow-x: hidden;
 		}
 		#area-juego {
 			height: 500px;
 			width: 800px;
 			background-image: url('assets/escenario1.png');
 			background-size: 100%;
-			border: 1px solid black;
+			//border: 1px solid black;
 			margin: 80px auto;
 			position: relative;
 
@@ -61,6 +65,8 @@
 	</style>
 </head>
 <body>
+	<h1>Lolita Game</h1>
+	<img src="assets/lolita-wall.png" id="wall-img">
 	<div id="area-juego">
 		<div id="checkpoint1">
 			<img src="assets/winner.gif" />
@@ -70,10 +76,17 @@
 		</div>
 		<div id="checkpoint2">
 			<img src="assets/door.png">
+			<div class="led-box">
+			    <div class="led-red" id="led"></div>
+		  </div>
 		</div>
 	</div>
 
-
+	<!--<p class="creditos">
+		Creado por <a href="https://twitter.com/florenciaazd" target="_blank"><span class="ion-social-twitter"></span>Florencia AZD</a> <br>
+		<a href="https://github.com/Florencia-azd/LolitaGame" target="_blank"><span class="ion-social-github"></span> Github</a>
+		<br>Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Licencia Creative Commons Atribución 4.0 Internacional</a>.
+	</p> -->
 
 	<script src="jquery-3.1.0.min.js"></script>
 	<script src="script.js"></script>
