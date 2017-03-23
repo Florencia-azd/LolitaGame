@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Pixel Font";
     src: local('Pixel Font'),
-         url("pixel-font.ttf") format('truetype');
+         url("../font/pixel-font.ttf") format('truetype');
 }
 
 body {
