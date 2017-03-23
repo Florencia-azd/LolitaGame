@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Super Script</title>
-    <style>
-        body {
-            margin: 0;
-        }
-        #area-juego {
-            height: 500px;
-            width: 800px;
-            border: 1px solid black;
-            margin: 80px auto;
-            position: relative;
-        }
+	<meta charset="UTF-8">
+	<title>Super Script</title>
+	<style>
+		body {
+			margin: 0;
+			overflow-y: hidden;
+	 		overflow-x: scroll;
+		}
+		#area-juego {
+			height: 500px;
+			width: 800px;
+			background-image: url('assets/escenario1.png');
+			background-size: 100%;
+			border: 1px solid black;
+			margin: 80px auto;
+			position: relative;
 
-        #personaje1 {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: gray;
-            position: absolute;
-            opacity: 0;
-        }
+		}
 
-        #check1 {
-            position: absolute;
-        }
+		#personaje1 {
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			opacity: 0;
+			z-index: 2;
+		}
 
-        #check1 img {
-            width: 30%;
-            opacity: 0;
-        }
+		#personaje1 img {
+			width: 100%;
+		}
 
-        .gif img {
-            width: 30%;
-        }
-    </style>
+		#checkpoint1, #checkpoint2 {
+			position: absolute;
+		}
+
+		#checkpoint1 {
+			opacity: 0;
+			width: 90%;
+		    left: 50px;
+		    top: 75px;
+		}
+
+		#checkpoint1 img {
+			width: 100%;
+		}
+
+		#checkpoint2 {
+			top: 295px;
+		    left: 585px;
+		    width: 100px;
+		}
+
+		#checkpoint2 img {
+			width: 100%;
+		}
+
+
+	</style>
 </head>
 <body>
-    <div id="area-juego">
-        <div id="check1">
-            <img src="star1.png"/>
-        </div>
-        <div id="personaje1"></div>
-    </div>
+	<div id="area-juego">
+		<div id="checkpoint1">
+			<img src="assets/winner.gif" />
+		</div>
+		<div id="personaje1">
+			<img src="assets/personaje-estado2.gif">
+		</div>
+		<div id="checkpoint2">
+			<img src="assets/door.png">
+		</div>
+	</div>
 
-    <div class="gif" style="opacity: 0;">
-        <img src="bubble1.gif">
-    </div>
 
-    <script src="jquery-3.1.0.min.js"></script>
-    <script src="script.js"></script>
+
+	<script src="jquery-3.1.0.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
