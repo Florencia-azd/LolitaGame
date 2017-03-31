@@ -18,20 +18,21 @@ body {
 
 .creditos {
     padding-top: 30px;
-    color: #fff;
+    color: #000;
     text-align: center;
     letter-spacing: 2px;
 }
 
 .creditos a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 h1 {
     font-family: "Pixel Font", sans-serif;
     text-align: center;
     font-size: 60px;
+    margin-bottom: 0;
 }
 
 .led-box {

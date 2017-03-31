@@ -42,14 +42,15 @@ $(document).ready(function () {
 			$("#key1").attr("src", "assets/key1.png");
 		}
 
-		if (top == 150 && left == 550 && estadosKeys.key1 == true) {
+		if (top == 150 && left == 550 && estadosKeys.key1 == true && estadosKeys.key2 == false) {
 			estadosKeys.key2 = true;
 			$("#keyCheck2").hide();
 			$("#keyCheck3").show();
 			$("#key2").attr("src", "assets/key1.png");
 		}
 
-		if (top == 300 && left == 250 && estadosKeys.key2 == true) {
+		if (top == 300 && left == 250 && estadosKeys.key2 == true && estadosKeys.key3 == false) {
+			estadosKeys.key3 = true;
 			estadosKeys.entrada = true;
 			$("#keyCheck3").hide();
 			$("#key3").attr("src", "assets/key1.png");
