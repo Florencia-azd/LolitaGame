@@ -50,8 +50,8 @@ $(document).ready(function () {
 		}
 
 		if (top == 300 && left == 250 && estadosKeys.key2 == true && estadosKeys.key3 == false) {
-			estadosKeys.key3 = true;
 			estadosKeys.entrada = true;
+			estadosKeys.key3 = true;
 			$("#keyCheck3").hide();
 			$("#key3").attr("src", "assets/key1.png");
 			$(".led-red").toggleClass("led-green");
